@@ -87,7 +87,7 @@
      - `sudo apt-get install -y php7.0-mcrypt`.
      - `sudo apt-get install -y php7.0-xml`.
      - `sudo apt-get install -y php7.0-zip`.
- 4. Herstart de webserver op de extensies te activeren. `sudo service apache2 restart`.
+ 4. Herstart de webserver om de extensies te activeren. `sudo service apache2 restart`.
  5. Enable mod rewrite. `suda a2enmod rewrite`.
  6. Integreer drupal:
      - Ga naar de `cd ~`.
