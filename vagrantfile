@@ -1,0 +1,21 @@
+Vagrant.configure("2") do |config|
+
+  # Box instellingen -> van welke box wil je gebruik te maken zie https://app.vagrantup.com/boxes/search
+      config.vm.box = "bento/ubuntu-16.04" 
+
+  # Provider instellingen -> Om de vitruele hardware aan te passen (vb. meer geheugen).
+    config.vm.provider "virtualbox" do |vb|
+      # (Dit zou er zo uitzien. ->) vb.memory = 2048
+  end
+
+  # Netwerk instellingen -> Door local te surfen naar 192.168.33.10 kan je de lamp zien.
+    config.vm.network "private_network", ip: "192.168.33.10"
+
+  # Folder instellingen -> Waar de page in staat. -> met rechtenlimieten op.
+    config.vm.synced_folder ".", "/var/www/html", :nfs => { :mount_options => ["dmode=777", "fmode=666"] }
+
+  # Provisioning -> Onderstaande scripts worden automatisch uitgevoerd bij 'vagrant up'.
+    config.vm.provision "shell", path: "Webserver_database.sh"
+    config.vm.provision "shell", path: "webapplication.sh"
+    config.vm.provision "shell", path: "cockpit.sh"
+end
