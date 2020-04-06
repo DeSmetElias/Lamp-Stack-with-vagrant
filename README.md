@@ -1,10 +1,10 @@
 # How to build a LAMP development environment in Vagrant
-  > The LAMP development environment will consist of linux, apache, mysql and php. We use the content management framework drupal as a web application on our PHP application
+  > The LAMP development environment will consist of linux, apache, mysql and php. We will use drupal as PHP-application. Drupal is an open source CMS (i.e. Content Management System) in which websites and blogs can be developed and managed.
  ### Software
- 1. Surf naar [Vagrant](https://www.vagrantup.com/) en maak een account aan of log in.
- 2. Download de nieuwste versie van [Vagrant](https://www.vagrantup.com/).
- 3. Download de nieuwste versie van [VirtualBox](https://www.virtualbox.org/).
- 4. Download een console emulator voorbeeld [ConEmu](https://conemu.github.io/en/TextSelection.html) of [git](https://git-scm.com/).
+ - First of all we are going to download the software we will need: 
+ 1. Go to  [Vagrant](https://www.vagrantup.com/) and download the latest version.
+ 2. Download de nieuwste versie van [VirtualBox](https://www.virtualbox.org/).
+ 3. Download een console emulator voorbeeld [ConEmu](https://conemu.github.io/en/TextSelection.html) of [git](https://git-scm.com/).
  
  ### Aanmaken vagrantfile (Zie uitgewerkt script.)
  1. Maak eerst een map aan. `mkdir __naamDirectory__`.
