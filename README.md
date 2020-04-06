@@ -1,5 +1,5 @@
-# Opzetten LAMP in vagrant met drupal applicatie
-  > De lamp bestaat uit een linux, apache, mysql en php met daarop drupal applicatie en een cockpit voor monitoring.
+# How to build a LAMP development environment in Vagrant
+  > The LAMP development environment will consist of linux, apache, mysql and php. We use the content management framework drupal as a web application on our PHP application
  ### Software
  1. Surf naar [Vagrant](https://www.vagrantup.com/) en maak een account aan of log in.
  2. Download de nieuwste versie van [Vagrant](https://www.vagrantup.com/).
