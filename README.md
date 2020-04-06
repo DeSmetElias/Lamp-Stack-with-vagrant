@@ -6,9 +6,10 @@
  2. Go to [VirtualBox](https://www.virtualbox.org/) and download the latest version of VirtualBox.
  3. We also need a console emulator and  I prefer [git](https://git-scm.com/). So download also the latest version of git.
  
- ### Aanmaken vagrantfile (Zie uitgewerkt script.)
- 1. Maak eerst een map aan. `mkdir __naamDirectory__`.
- 2. Open de console emulator en ga in de map. `cd __naamDirectory__`.
+ ### Create a vagrantfile.
+ 1. Create a folder, in this folder the virtual machine will be set up. Work immediately from your console emulator. 
+Create a folder on the desktop and name it LAMP. `mkdir LAMP`
+ 2. Make sure you work in your folder. Otherwise navigate in your folder. `cd LAMP`
  3. Maak de vagrantfile aan. `vagrant init "__naamBox"`. Alle boxen vind je [hier](https://app.vagrantup.com/boxes/search).
  4. Open de vagrantfile in visual studio code en stel de netwerk instellingen in. `config.vm.network "private_network", ip: "192.168.33.10"`.
  5. Stel de folder instellingen in. `config.vm.synced_folder ".", "/var/www/html", :nfs => { :mount_options => ["dmode=777", "fmode=666"] }`.
