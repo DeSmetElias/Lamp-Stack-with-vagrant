@@ -108,7 +108,7 @@
  2. Start cockpit. `sudo systemctl start cockpit.socket`. 
  3. Enable cockpit. `sudo systemctl enable cockpit.socket`.
  
- ### go through installation script in drupal on web
+ ### Run drupal's installation script on the web
  1. Choose for the standard settings.
  2. Choose your own language.
  3. Click next. 
