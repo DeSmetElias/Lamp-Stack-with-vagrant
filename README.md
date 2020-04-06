@@ -21,7 +21,7 @@
  7. Go back to your git and navigatie into VSC. `code .`. Now VSC will open with the map you are using.
  8. Make three new files Webserver_database.sh, webapplication.sh and cockpit.sh
 
-### installation script for the webserver and database
+### Installation script for the webserver and database
  1.  Go inside your empty script and add the update and upgrade, this will update en upgrade the packages on your system.  
      -  `sudo apt-get update`
      -  `sudo apt-get -y upgrade`  
@@ -32,14 +32,14 @@
      - `debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password root'`.
  5. Install mysql and the client. `sudo apt-get install -y mysql-server mysql-client`.
  6. Install the databank
-     - The script automatically removes the test database. Names the database, creates a user and gives him all rights
+     - The script automatically removes the test database. Names the database, creates a user and gives him all rights. Don't forget to remove the brackets [].
       ```
         if [ ! -f /var/log/databasesetup ];
         then
         echo "DROP DATABASE IF EXISTS test" | mysql -uroot -proot
-        echo "CREATE USER '[NameOfTheUser]'@'localhost' IDENTIFIED BY 'root'" | mysql -uroot -proot #NAAM USER
-        echo "CREATE DATABASE lampdatabase" | mysql -uroot -proot #NAANM DATABANK
-        echo "GRANT ALL ON lampdatabase.* TO 'elias'@'localhost'" | mysql -uroot -proot
+        echo "CREATE USER '[NameOfTheUser]'@'localhost' IDENTIFIED BY 'root'" | mysql -uroot -proot
+        echo "CREATE DATABASE [NameDatabase]" | mysql -uroot -proot 
+        echo "GRANT ALL ON [NameOfTheDatabase].* TO '[NameUser]'@'localhost'" | mysql -uroot -proot
         echo "flush privileges" | mysql -uroot -proot
 
         sudo touch /var/log/databasesetup
@@ -73,7 +73,7 @@
   sudo service apache2 restart
 ```
  
-### installation script for the webapplication
+### Installation script for the webapplication
  1. Install php. `sudo apt-get install php7.0`.
  2. Make a repository.  
      - `sudo add-apt-repository ppa:ondrej/php`.  
@@ -108,7 +108,7 @@
  2. Start cockpit. `sudo systemctl start cockpit.socket`. 
  3. Enable cockpit. `sudo systemctl enable cockpit.socket`.
  
- ### Doorloop installatie script in drupal op web
+ ### go through installation script in drupal on web
  1. Choose for the standard settings.
  2. Choose your own language.
  3. Click next. 
