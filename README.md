@@ -1,17 +1,18 @@
 # How to build a LAMP development environment in Vagrant
   > The LAMP development environment will consist of linux, apache, mysql and php. We will use drupal as PHP-application. Drupal is an open source CMS (i.e. Content Management System) in which websites and blogs can be developed and managed.
  ### Software
- First of all we are going to download the software we will need: 
+ First of all download the software.
  1. Go to [Vagrant](https://www.vagrantup.com/) and download the latest version of Vagrant.
  2. Go to [VirtualBox](https://www.virtualbox.org/) and download the latest version of VirtualBox.
- 3. We also need a console emulator and  I prefer [git](https://git-scm.com/). So download also the latest version of git.
+ 3. Go to [Visual Studio Code](https://code.visualstudio.com/) and download the latest version of VSC.
+ 3. You also need a console emulator. my preference is [git](https://git-scm.com/). So download also the latest version of git.
  
  ### Create a vagrantfile.
  1. Create a folder, in this folder the virtual machine will be set up. Work immediately from your console emulator. 
 Create a folder on the desktop and name it LAMP. `mkdir LAMP`
  2. Make sure you work in your folder. Otherwise navigate in your folder. `cd LAMP`
- 3. Maak de vagrantfile aan. `vagrant init "__naamBox"`. Alle boxen vind je [hier](https://app.vagrantup.com/boxes/search).
- 4. Open de vagrantfile in visual studio code en stel de netwerk instellingen in. `config.vm.network "private_network", ip: "192.168.33.10"`.
+ 3. Create a vagrantfile. You can chose a box [here](https://app.vagrantup.com/boxes/search). `vagrant init [NameBox]`
+ 4. Open the vagrantfile in visual studio code en stel de netwerk instellingen in. `config.vm.network "private_network", ip: "192.168.33.10"`.
  5. Stel de folder instellingen in. `config.vm.synced_folder ".", "/var/www/html", :nfs => { :mount_options => ["dmode=777", "fmode=666"] }`.
  6. Zorg dat de provision naar de juiste scripts leid.  
      -  Hierin staat alles voor de webserver en database `config.vm.provision "shell", path: "Webserver_database.sh"`  
