@@ -1,5 +1,5 @@
 # How to build a LAMP development environment in Vagrant
-  > The LAMP development environment will consist of linux, apache, mysql and php. We will use drupal as PHP-application. Drupal is an open source CMS (i.e. Content Management System) in which websites and blogs can be developed and managed.
+  > The LAMP development environment will consist of Linux, Apache, MySQL, and PHP. We will use drupal as PHP-application. Drupal is an open-source CMS (i.e. Content Management System) in which websites and blogs can be developed and managed.
  ### Software
  First of all download the software.
  1. Go to [Vagrant](https://www.vagrantup.com/) and download the latest version of Vagrant.
